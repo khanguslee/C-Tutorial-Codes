@@ -34,8 +34,7 @@ int main(int argc, char* argv[]) {
 	std::vector<std::string> text;	// Store the lines of text here
 	if (argc < 2)
 		read(std::cin, text);
-	else {
-		std::ifstream in(argv[1]);
+	else {0
 		if (not in) {
 			std::perror(argv[1]);
 			return EXIT_FAILURE;
