@@ -13,3 +13,5 @@ no_longer_in_a_comment();
 // Start of a comment /* start of comment characters are not special in a comment
 
 no_longer_in_a_comment();
+
+/// Start of a comment

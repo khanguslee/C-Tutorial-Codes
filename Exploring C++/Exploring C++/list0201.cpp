@@ -10,12 +10,13 @@ Keeps reading from standard input until a non-number is input
 
 #include "stdafx.h"
 
-#include <iostream>
-#include <istream>
-#include <limits>
-#include <ostream>
+#include <iostream>		// Informs compiler about the names of the standard I/O streams
+#include <istream>		// Fetches the input operator (>>)
+#include <limits>		// Brings the name numeric_limits
+#include <ostream>		// Brings in the output operator (<<)
 
 int main() {
+	// std::numeric_limits<variable_type> to determine the number of bits a type requires
 	int min(std::numeric_limits<int>::max());
 	int max(std::numeric_limits<int>::min());
 	bool any(false);
