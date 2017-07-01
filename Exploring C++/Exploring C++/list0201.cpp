@@ -3,8 +3,11 @@
 // Date:	01/07/2017
 // User:	Angus Lee
 
-// Read the program and determine what the program does.
-// Keeps reading from standard input until a non-number is input
+/*
+Read the program and determine what the program does.
+Keeps reading from standard input until a non-number is input
+*/
+
 #include "stdafx.h"
 
 #include <iostream>
