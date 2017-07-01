@@ -22,7 +22,7 @@ int main() {
 	}
 	
 	if (!count)
-		std::cout << "Please input at least 1 integer" << '\n';
+		std::cout << "Please input at least 1 integer\n";
 	else 
 		std::cout << "average = " << sum / count << '\n';
 	system("pause");
