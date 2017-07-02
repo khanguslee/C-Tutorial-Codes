@@ -7,22 +7,20 @@
 #include <stdafx.h>
 #include <iostream>
 #include <istream>
+#include <iterator>
 #include <ostream>
 #include <vector>
 
 int main() {
 	std::vector<int> data;
-	int x(0);
 
-	// Inputs standard input into data vector
-	while (std::cin >> x)
-		data.push_back(x);
+	std::copy(std::istream_iterator<int>(std::cin),
+		std::istream_iterator<int>(),
+		std::back_inserter(data));
 
-	for (std::vector<int>::iterator i(data.begin()); i != data.end(); ++i)
+	for (std::vector<int>::iterator i = data.begin(); i != data.end(); ++i)
 		*i = *i * 2;
 
-	for (std::vector<int>::iterator i(data.begin()); i != data.end(); ++i)
-		std::cout << *i << '\n';
-
+	std::copy(data.begin(), data.end(), std::ostream_iterator<int>(std::cout, "\n"));
 	system("pause");
 }
